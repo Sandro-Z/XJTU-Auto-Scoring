@@ -5,11 +5,11 @@
 
 * Install Selenium
 
-> ` pip install selenium `
+ ` pip install selenium `
 
 * Run Script
 
-> ` python pingjiao.py `
+ ` python pingjiao.py `
 
 * Enter student number and password
 
