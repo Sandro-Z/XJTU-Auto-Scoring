@@ -3,14 +3,19 @@
 
 ## Usage
 
-> Install Selenium
+* Install Selenium
 
 > ` pip install selenium `
-> Run Script
+
+* Run Script
+
 > ` python pingjiao.py `
-> Enter student number and password
-> Enter teachers you dislike
-> Wait the auto_script to run
+
+* Enter student number and password
+
+* Enter teachers you dislike
+
+* Wait the auto_script to run
 
 ## Common issues
 
