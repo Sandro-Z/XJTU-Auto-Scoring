@@ -21,23 +21,23 @@ while s != '#':
 driver = webdriver.Chrome(options=options)
 #driver=webdriver.Firefox(options=options)
 #driver = webdriver.Edge(options=options)
-driver.implicitly_wait(20)
+driver.implicitly_wait(5)
 driver.maximize_window()
 driver.get("http://ehall.xjtu.edu.cn/")
 driver.find_element(By.XPATH, '//*[@id=\"ampHasNoLogin\"]').click()
 driver.find_element(By.XPATH, '//*[@id="form1"]/input[1]').send_keys(name)
 driver.find_element(By.XPATH, '//*[@id="form1"]/input[2]').send_keys(password)
 driver.find_element(By.XPATH, '//*[@id="account_login"]').click()
-time.sleep(2)
+time.sleep(1)
 driver.find_element(By.XPATH, '//*[@id="ampPersonalAsideLeftMini"]/div/div[2]').click()
-time.sleep(2)
+time.sleep(1)
 driver.find_element(By.XPATH, '//*[@id="ampPersonalAsideLeftTabHead"]/div[2]/i').click()  # 添加 点击可用应用
 driver.find_element(By.XPATH, '//*[@id="ampPersonalAsideLeftAllCanUseAppsSearchInput"]').send_keys('网上评教',
                                                                                                    Keys.ENTER)  # 添加 点击可用应用
-time.sleep(2)
+time.sleep(1)
 driver.find_element(By.XPATH,
                     '/html/body/article[5]/aside[1]/div[2]/div[2]/div[2]/div[2]/ul/li[1]/span[1]').click()  # dianjiquanbu
-time.sleep(2)
+time.sleep(1)
 
 driver.find_element(By.XPATH, '//*[@id="ampPersonalAsideLeftAllCanUseAppsTabContent"]/div[1]/div/h5').click()  # 报错位置
 time.sleep(2)
@@ -96,6 +96,6 @@ for num in range(0, len(div_list)):
 
     div.find_element(by=By.XPATH, value='//a[contains(text(),"提交")]').click()  # 提交
     div.find_element(by=By.XPATH, value='//a[contains(text(),"确认")]').click()  # 确认
-    time.sleep(10)
+    time.sleep(5)
     print("end")
 print("finished.")
