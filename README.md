@@ -17,6 +17,10 @@
 
 * Wait the auto_script to run
 
+## For lazy people
+
+download the executable from releases and doble-click run
+
 ## Common issues
 
 Maybe you have to close down your proxy software or VPN the first time you run selenium browser drivers.
