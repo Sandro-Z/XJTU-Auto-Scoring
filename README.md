@@ -19,7 +19,7 @@
 
 ## For lazy people
 
-download the executable from releases and doble-click run
+download the executable from releases and double-click run
 
 ## Common issues
 
