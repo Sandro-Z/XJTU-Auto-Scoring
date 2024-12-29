@@ -29,8 +29,15 @@ driver.find_element(By.XPATH, '//*[@id="form1"]/input[1]').send_keys(name)
 driver.find_element(By.XPATH, '//*[@id="form1"]/input[2]').send_keys(password)
 driver.find_element(By.XPATH, '//*[@id="account_login"]').click()
 time.sleep(1)
+
+# if "您目前的登录密码过于简单……建议您立即修改密码。" click "下次再说"
+# find if there's van_dialog1 class
+if len(driver.find_elements(By.CLASS_NAME, value='van-dialog1')) != 0:
+    driver.find_element(By.XPATH, '//*[@id="passTip_know"]').click()
+    time.sleep(5)
+
 driver.find_element(By.XPATH, '//*[@id="ampPersonalAsideLeftMini"]/div/div[2]').click()
-time.sleep(1)
+time.sleep(5) # 给动画多一点时间，否则下一行有小概率会失败
 driver.find_element(By.XPATH, '//*[@id="ampPersonalAsideLeftTabHead"]/div[2]/i').click()  # 添加 点击可用应用
 driver.find_element(By.XPATH, '//*[@id="ampPersonalAsideLeftAllCanUseAppsSearchInput"]').send_keys('网上评教',
                                                                                                    Keys.ENTER)  # 添加 点击可用应用
