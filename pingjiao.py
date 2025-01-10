@@ -1,6 +1,7 @@
 import random
 import re
 import time
+import getpass
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains, Keys
@@ -12,7 +13,7 @@ options.add_argument("--disable-blink-features=AutomationControlled")
 options.add_argument("--disable-infobars")
 print("说明：\n不喜欢的老师全部4星中好评~\n等待时间较长属于正常现象,一个页面最长可加载1分钟，请不要点击页面元素~\n如果出现意外，如报错退出，请重新运行~~")
 name = input("学号:\n>>")
-password = input("密码:\n>>")
+password = getpass.getpass("密码:\n>>")
 unfavoredTeacher = set()
 s = input("在此输入你不喜欢的老师的名字，输入#结束\n>>")
 while s != '#':
