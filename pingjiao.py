@@ -8,10 +8,9 @@ from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.common.by import By
 
 options = webdriver.ChromeOptions()
-#options = webdriver.EdgeOptions()
 options.add_argument("--disable-blink-features=AutomationControlled")
 options.add_argument("--disable-infobars")
-print("说明：\n不喜欢的老师全部4星中好评~\n等待时间较长属于正常现象,一个页面最长可加载1分钟，请不要点击页面元素~\n如果出现意外，如报错退出，请重新运行~~")
+print("说明：\n不喜欢的老师全部4星中好评~\n等待时间较长属于正常现象,一个页面最长可加载1分钟，请不要点击页面元素~\n请保持弹出的浏览器界面在最顶层，如果出现意外，比如报错退出，请重新运行~~")
 name = input("学号:\n>>")
 password = getpass.getpass("密码:\n>>")
 unfavoredTeacher = set()
@@ -20,8 +19,7 @@ while s != '#':
     unfavoredTeacher.add(s)
     s = input('>>')
 driver = webdriver.Chrome(options=options)
-#driver=webdriver.Firefox(options=options)
-#driver = webdriver.Edge(options=options)
+#默认使用Chrome浏览器
 driver.implicitly_wait(5)
 driver.maximize_window()
 driver.get("http://ehall.xjtu.edu.cn/")
